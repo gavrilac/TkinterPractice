@@ -24,6 +24,9 @@ Authors: David Mutchler, Mark Hays, and their colleagues
 import tkinter
 from tkinter import ttk
 
+import tkinter
+from tkinter import ttk
+
 
 def main():
     root = tkinter.Tk()
@@ -45,15 +48,17 @@ def main():
 def print_contents(entry_box):
     """
     Prints onto the Console the contents of the given ttk.Entry.
-    
+
     In this example, it is used as the function that is "CALLED BACK"
     when an event (namely, the pressing of a certain Button) occurs.
-    
+
     Type hints:
       :type entry_box: ttk.Entry
     """
-    contents_of_entry_box = entry_box.get()
+    contents_of_entry_box = int(entry_box.get())
+    contents_of_entry_box += 10
     print(contents_of_entry_box)
+
 
 ########################################################################
 #
